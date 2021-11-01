@@ -1,7 +1,9 @@
-setopt +o nomatch
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+autoload -Uz compinit && compinit
 unsetopt SINGLE_LINE_ZLE
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%F{blue}%b%f)'
+set +o nomatch
 precmd () {vcs_info}
 
 PROMPT="%F{yellow}%n%f:%F{cyan}%h%f %F{magenta}%1~%f # "$'\n'
