@@ -5,3 +5,6 @@ ANDROID_PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDR
 export PATH=$JAVA_HOME/bin:$ANDROID_PATH:/usr/local/sbin:$PATH
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 
+EDITOR=vim
+REACT_EDITOR=$EDITOR
+
