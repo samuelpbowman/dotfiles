@@ -20,10 +20,13 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 " CoC extensions
 let g:coc_global_extensions = ['coc-tsserver']
 
-" autocmd
+" vim-test
+let g:test#runner_commands = ['Jest']
+let g:test#javascript#runner = 'jest'
 
