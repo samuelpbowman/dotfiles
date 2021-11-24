@@ -1,12 +1,6 @@
+syntax on
 filetype on
 filetype plugin on
-set tabstop=2
-colorscheme molokai
-set backspace=2
-set number
-set wildmode=longest,list,full
-set wildmenu
-set expandtab
 
 " vim plugins
 call plug#begin('~/.vim/plugged')
@@ -21,6 +15,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-test/vim-test'
+Plug 'trkw/yarn.vim'
 call plug#end()
 
 " CoC extensions
@@ -29,4 +24,12 @@ let g:coc_global_extensions = ['coc-tsserver']
 " vim-test
 let g:test#runner_commands = ['Jest']
 let g:test#javascript#runner = 'jest'
+
+set smartindent
+set shiftwidth=2
+set backspace=2
+set number
+set wildmode=longest,list,full
+set wildmenu
+set expandtab
 

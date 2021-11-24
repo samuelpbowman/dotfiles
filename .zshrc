@@ -17,4 +17,7 @@ export GPG_TTY=$(tty)
 fortune -s | cowsay -g | lolcat
 
 alias dot-config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias purge-prs="git branch | grep pr\/ | xargs git branch -D"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
