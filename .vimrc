@@ -15,7 +15,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-test/vim-test'
-Plug 'trkw/yarn.vim'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 " CoC extensions
@@ -25,6 +25,9 @@ let g:coc_global_extensions = ['coc-tsserver']
 let g:test#runner_commands = ['Jest']
 let g:test#javascript#runner = 'jest'
 
+" rainbow
+let g:rainbow_active = 1
+
 set smartindent
 set shiftwidth=2
 set backspace=2
@@ -32,4 +35,4 @@ set number
 set wildmode=longest,list,full
 set wildmenu
 set expandtab
-
+colorscheme koehler

@@ -21,3 +21,5 @@ alias purge-prs="git branch | grep pr\/ | xargs git branch -D"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+eval "$(rbenv init - zsh)"
+
