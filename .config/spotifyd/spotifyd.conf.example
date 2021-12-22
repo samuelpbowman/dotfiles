@@ -1,0 +1,13 @@
+[global]
+username = 
+password =
+backend = "portaudio"
+volume_controller = "softvol"
+device_name =
+bitrate = 320
+cache_path = "$HOME/Library/Application Support/Spotify/PersistentCache/Storage" 
+initial_volume = "60"
+volume_normalisation = true
+zeronconf_port = 4204
+device_type = "computer"
+
