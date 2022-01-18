@@ -22,3 +22,8 @@ fi
 
 eval "$(rbenv init - zsh)"
 
+function idof {
+  STR="id of app \"$1\""
+  osascript -e "id of app \"$1\"" | tr -d '\n' | pbcopy
+}
+
