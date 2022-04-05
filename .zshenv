@@ -8,4 +8,5 @@
   REACT_EDITOR=/usr/local/bin/codium
 fi
 
+PATH="/opt/metasploit-framework/bin:$PATH"
 GPG_TTY=$(tty)
