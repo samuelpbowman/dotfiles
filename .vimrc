@@ -20,7 +20,7 @@ Plug 'luochen1990/rainbow'
 call plug#end()
 
 " CoC extensions
-let g:coc_global_extensions = ['coc-tsserver']
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver']
 
 " vim-test
 let g:test#runner_commands = ['Jest']
