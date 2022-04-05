@@ -62,12 +62,12 @@
 					<string>for f in "$@"
 do
     TAG=$(uuidgen)
-    PREFIX=/private/tmp/$TAG
+    PREFIX=/private/tmp
 	scale="fps=20,scale='min(480,iw)':'min(480,ih)':force_original_aspect_ratio=decrease"
-	/usr/local/bin/ffmpeg -hwaccel videotoolbox -i "$f" -vf "$scale,palettegen" "$PREFIX/$f.png"
-	/usr/local/bin/ffmpeg -hwaccel videotoolbox -i "$f" -i "$PREFIX/$f.png" -filter_complex "$scale,paletteuse" "$PREFIX/$f.gif"
-	rm "$f"
-	/usr/local/bin/gifsicle -O3 --delay=1 --no-conserve-memory &lt; "$PREFIX/$f.gif" &gt; "$HOME/Pictures/out/$TAG.gif"
+	/usr/local/bin/ffmpeg -hwaccel videotoolbox -i $f -vf "$scale,palettegen" "$PREFIX/$TAG.png"
+	/usr/local/bin/ffmpeg -hwaccel videotoolbox -i $f -i $PREFIX/$TAG.png -filter_complex "$scale,paletteuse" $PREFIX/$TAG.gif
+	rm $f
+	/usr/local/bin/gifsicle -O3 --delay=1 --no-conserve-memory &lt; $PREFIX/$TAG.gif &gt; $HOME/Pictures/out/$TAG.gif
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -181,7 +181,7 @@ done</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>265.250000:305.000000</string>
+				<string>769.000000:305.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -313,7 +313,7 @@ done</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>265.250000:494.000000</string>
+				<string>769.000000:494.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Display Notification.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -323,7 +323,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4A00A8D5-4F53-4A49-897A-18656A5BEDC2</key>
+		<key>2712F218-EC96-4D40-BF50-401141957DAC</key>
 		<dict>
 			<key>from</key>
 			<string>8E7BC199-4A5F-4D5E-B1BD-89FC4386991F - 8E7BC199-4A5F-4D5E-B1BD-89FC4386991F</string>
