@@ -1,7 +1,6 @@
 autoload -Uz compinit && compinit
 . $HOME/.config/alii.zsh
 setopt EXTENDEDGLOB
-setopt nobanghist
 setopt CORRECTALL
 setopt GLOBDOTS
 setopt HISTIGNOREDUPS
