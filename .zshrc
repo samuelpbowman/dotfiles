@@ -1,4 +1,5 @@
 autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 . $HOME/.config/alii.zsh
 setopt EXTENDEDGLOB
 setopt CORRECTALL
