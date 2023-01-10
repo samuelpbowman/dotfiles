@@ -1,5 +1,5 @@
 if [[ `uname` = 'Darwin' ]]; then
-  export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
   export ANDROID_HOME=$HOME/Library/Android/sdk
   ANDROID_PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
   export ANDROID_SDK_ROOT=$ANDROID_HOME
