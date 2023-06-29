@@ -20,3 +20,4 @@ if [[ `uname` = 'Darwin' ]]; then
 fi
 
 fortune -s | cowsay -g | lolcat
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
