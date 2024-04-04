@@ -1,6 +1,6 @@
 [user]
 	name = Samuel P. Bowman
-	email = sam.bowman@365smartshop.com
+	email = samuelpbowman@users.noreply.github.com
 [pull]
 	ff = true
 [filter "lfs"]
@@ -8,3 +8,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
