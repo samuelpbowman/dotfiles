@@ -20,18 +20,9 @@ if [[ `uname` = 'Darwin' ]]; then
 fi
 
 fortune -s | cowsay -g | lolcat
-eval "$(rbenv init - zsh)"
-
-# pnpm
-export PNPM_HOME="/Users/samuel/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# eval "$(rbenv init - zsh)"
 
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
 
-. $HOME/.env
