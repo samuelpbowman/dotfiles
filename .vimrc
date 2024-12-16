@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-test/vim-test'
 Plug 'luochen1990/rainbow'
+Plug 'CoderCookE/vim-chatgpt'
 call plug#end()
 
 " CoC extensions
