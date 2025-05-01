@@ -6,6 +6,12 @@ if [[ `uname` = 'Darwin' ]]; then
   export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/latest
   export PATH=$JAVA_HOME/bin:$ANDROID_PATH:/usr/local/sbin:$POSTGRES_HOME/bin:$PATH
   export EDITOR=vim
+else
+  HISTFILE=~/.zsh_history
+  HISTSIZE=10000
+  SAVEHIST=10000
+  setopt appendhistory
 fi
 
+. ~/.localenv
 export GPG_TTY=$(tty)
