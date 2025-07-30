@@ -8,7 +8,18 @@ setopt HISTIGNOREDUPS
 setopt RCQUOTES
 bindkey -v
 
-PROMPT="%F{yellow}%n%f:%F{cyan}%h%f %F{magenta}%1~%f # "$'\n'
+precmd() { 
+  vcs_info 
+}
+autoload -Uz vcs_info colors add-zsh-hook
+setopt PROMPT_SUBST
+colors
+add-zsh-hook precmd vcs_info
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats "%{$fg[gray]%}%b%{$reset_color%}%m%u "
+
+PROMPT='%F{yellow}%n%f:%F{cyan}%h%f %F{magenta}%1~%f'$'\n${vcs_info_msg_0_}%F{blue}#%f '
 RPROMPT="%F{red}$(date "+%m.%d.%y") %F{green}%t%f"
 
 export NVM_DIR=$HOME/.nvm
